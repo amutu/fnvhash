@@ -1,0 +1,4 @@
+comment = 'fnv hash function for postgresql'
+default_version = '1.0'
+module_pathname = '$libdir/fnvhash'
+relocatable = true
