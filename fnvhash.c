@@ -1,7 +1,6 @@
 #include "postgres.h"
 #include <string.h>
 #include "fmgr.h"
-#include "utils/geo_decls.h"
 
 #include "fnv.h"
 
@@ -10,6 +9,23 @@ PG_MODULE_MAGIC;
 #endif
 
 PG_FUNCTION_INFO_V1(fnv032);
+Datum fnv032(PG_FUNCTION_ARGS);
+
+PG_FUNCTION_INFO_V1(fnv132);
+Datum fnv132(PG_FUNCTION_ARGS);
+
+PG_FUNCTION_INFO_V1(fnv1a32);
+Datum fnv1a32(PG_FUNCTION_ARGS);
+
+PG_FUNCTION_INFO_V1(fnv064);
+Datum fnv064(PG_FUNCTION_ARGS);
+
+PG_FUNCTION_INFO_V1(fnv164);
+Datum fnv164(PG_FUNCTION_ARGS);
+
+PG_FUNCTION_INFO_V1(fnv1a64);
+Datum fnv1a64(PG_FUNCTION_ARGS);
+
 	Datum
 fnv032(PG_FUNCTION_ARGS)
 {
@@ -19,7 +35,6 @@ fnv032(PG_FUNCTION_ARGS)
 	PG_RETURN_INT64(hashval);
 }
 
-PG_FUNCTION_INFO_V1(fnv132);
 	Datum
 fnv132(PG_FUNCTION_ARGS)
 {
@@ -29,7 +44,6 @@ fnv132(PG_FUNCTION_ARGS)
 	PG_RETURN_INT64(hashval);
 }
 
-PG_FUNCTION_INFO_V1(fnv1a32);
 	Datum
 fnv1a32(PG_FUNCTION_ARGS)
 {
@@ -39,7 +53,6 @@ fnv1a32(PG_FUNCTION_ARGS)
 	PG_RETURN_INT64(hashval);
 }
 
-PG_FUNCTION_INFO_V1(fnv064);
 	Datum
 fnv064(PG_FUNCTION_ARGS)
 {
@@ -61,7 +74,6 @@ fnv064(PG_FUNCTION_ARGS)
 	PG_RETURN_TEXT_P(new_b);
 
 }
-PG_FUNCTION_INFO_V1(fnv164);
 	Datum
 fnv164(PG_FUNCTION_ARGS)
 {
@@ -83,7 +95,6 @@ fnv164(PG_FUNCTION_ARGS)
 	PG_RETURN_TEXT_P(new_b);
 
 }
-PG_FUNCTION_INFO_V1(fnv1a64);
 	Datum
 fnv1a64(PG_FUNCTION_ARGS)
 {
